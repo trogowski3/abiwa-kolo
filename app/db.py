@@ -31,7 +31,8 @@ def init_schema():
 def insert_task(title, priority):
     with _lock, get_conn() as c:
         cur = c.execute(
-            "INSERT INTO tasks(title, priority) VALUES (?, ?)", (title, priority)
+            "INSERT INTO tasks(title, priority) VALUES (?, ?)", 
+            (title, priority)
         )
         return cur.lastrowid
 
