@@ -48,7 +48,7 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: .
-        run: pytest
+        run: python -m pytest app/tests -v
 
   build:
     runs-on: ubuntu-latest
